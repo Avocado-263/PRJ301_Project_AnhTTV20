@@ -21,7 +21,6 @@ body
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    flex-direction: column;
     background: #23242a;
 }
 .box
@@ -31,45 +30,6 @@ body
     height: 420px;
     background: #1c1c1c;
     border-radius: 8px;
-    overflow: hidden;
-}
-.box::before
-{
-    content: '';
-    z-index: 1;
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    transform-origin: bottom right;
-    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
-    animation: animate 6s linear infinite;
-}
-.box::after
-{
-    content: '';
-    z-index: 1;
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 380px;
-    height: 420px;
-    transform-origin: bottom right;
-    background: linear-gradient(0deg,transparent,#45f3ff,#45f3ff);
-    animation: animate 6s linear infinite;
-    animation-delay: -3s;
-}
-@keyframes animate
-{
-    0%
-    {
-        transform: rotate(0deg);
-    }
-    100%
-    {
-        transform: rotate(360deg);
-    }
 }
 form
 {
@@ -78,9 +38,6 @@ form
     background: #28292d;
     padding: 50px 40px;
     border-radius: 8px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
 }
 h2
 {
@@ -102,13 +59,11 @@ h2
     padding: 20px 10px 10px;
     background: transparent;
     outline: none;
-    box-shadow: none;
     border: none;
     color: #23242a;
     font-size: 1em;
     letter-spacing: 0.05em;
-    transition: 0.5s;
-    z-index: 10;
+    z-index: 2;
 }
 .inputBox span
 {
@@ -137,13 +92,11 @@ h2
     height: 2px;
     background: #45f3ff;
     border-radius: 4px;
-    overflow: hidden;
     transition: 0.5s;
-    pointer-events: none;
-    z-index: 9;
+    z-index: 1;
 }
 .inputBox input:valid ~ i,
-.inputBox input:focus ~ i
+.inputBox input:focus ~ i 
 {
     height: 44px;
 }
@@ -157,7 +110,7 @@ h2
     margin: 10px 0;
     font-size: 0.75em;
     color: #8f8f8f;
-    text-decoration: beige;
+    text-decoration: none;
 }
 .links a:hover,
 .links a:nth-child(2)

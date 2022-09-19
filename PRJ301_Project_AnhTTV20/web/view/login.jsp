@@ -13,7 +13,7 @@
         <link href="../css/login.css" rel="stylesheet" type="text/css"/>
 <body>
 	<div class="box">
-		<form autocomplete="off">
+            <form action="login" method="post" autocomplete="off">
 			<h2>Sign in</h2>
 			<div class="inputBox">
 				<input type="text" required="required">
